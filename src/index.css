@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Circular";
+  src: url("/fonts/circular-std-medium-500.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-quest: "Circular", sans-serif;
+  --color-rally-black: #111110;
+  --color-rally-cream: #F5F3EE;
+  --color-rally-green: #1A7A4A;
+  --color-rally-green-light: #E8F5EE;
+  --color-rally-amber: #F5A623;
+  --color-rally-amber-light: #FEF6E4;
+  --color-rally-border: #E8E6E1;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #F5F3EE;
+  font-family: "Circular", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Blotchy, printed-on-paper-towel texture — coarse mottling rather than fine
+   grain, like uneven ink soaking into fibrous paper. Kept subtle (low
+   opacity) so it reads as tactile, not dirty. */
+.bg-grain {
+  position: relative;
+}
+.bg-grain::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.6;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.02 0.035' numOctaves='3' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.13  0 0 0 0 0.11  0 0 0 0 0.09  0 0 0 0.09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.bg-grain-fine::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Leaflet's internal panes/controls use z-index up to 1000, which escapes
+   above fixed UI (bottom nav, sidebar) unless the map's own stacking
+   context is pinned down here. */
+.leaflet-container {
+  z-index: 0;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .cert-print, .cert-print * {
+    visibility: visible;
+  }
+  .cert-print {
+    position: fixed;
+    inset: 0;
+    max-width: none !important;
+    width: 100vw;
+    height: 100vh;
+    aspect-ratio: auto !important;
+    margin: 0;
+    padding: 24px;
+  }
+}
