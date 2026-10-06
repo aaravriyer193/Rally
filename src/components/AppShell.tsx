@@ -21,7 +21,7 @@ export function AppShell({ children }: { children: ReactNode }) {
       <aside className="hidden md:flex md:flex-col w-60 border-r border-rally-border bg-white fixed inset-y-0 left-0 px-5 py-7 z-30">
         <div className="flex items-center gap-2 text-rally-black px-2 mb-8">
           <RallyIcon size={26} />
-          <span className="text-lg" style={{ fontFamily: 'Circular' }}>Rally</span>
+          <span className="text-lg" style={{ fontFamily: 'CoFo Robert' }}>Rally</span>
         </div>
 
         <nav className="flex flex-col gap-1 flex-1">

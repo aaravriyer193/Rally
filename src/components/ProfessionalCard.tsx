@@ -19,7 +19,7 @@ export function ProfessionalCard({ listing, distanceKm }: { listing: Professiona
       )}
       <div className="p-4">
         <div className="flex items-start justify-between gap-3">
-          <p className="text-sm text-rally-black" style={{ fontFamily: 'Circular' }}>{name}</p>
+          <p className="text-sm text-rally-black" style={{ fontFamily: 'CoFo Robert' }}>{name}</p>
           <span className="text-[10px] bg-rally-cream text-gray-500 px-2 py-0.5 rounded-full flex-shrink-0">{listing.category}</span>
         </div>
 

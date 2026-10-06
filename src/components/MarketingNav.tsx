@@ -7,7 +7,7 @@ export function MarketingNav() {
       <div className="flex items-center justify-between px-8 py-5 max-w-6xl mx-auto">
         <Link to="/" className="flex items-center gap-2 text-rally-black">
           <RallyIcon size={26} />
-          <span className="text-xl" style={{ fontFamily: 'Circular' }}>Rally</span>
+          <span className="text-xl" style={{ fontFamily: 'CoFo Robert' }}>Rally</span>
         </Link>
         <Link
           to="/sign-in"

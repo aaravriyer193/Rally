@@ -42,7 +42,7 @@ export function Contact() {
           <p className="text-xs text-rally-amber uppercase tracking-wide mb-4 text-center flex items-center justify-center gap-1.5">
             <Icon name="chats-circle" weight="fill" size={14} /> Contact
           </p>
-          <h1 className="text-3xl text-rally-black mb-3 text-center" style={{ fontFamily: 'Circular', letterSpacing: '-0.5px' }}>
+          <h1 className="text-3xl text-rally-black mb-3 text-center" style={{ fontFamily: 'CoFo Robert', letterSpacing: '-0.5px' }}>
             Get in touch
           </h1>
           <p className="text-sm text-gray-400 text-center mb-10">
@@ -55,7 +55,7 @@ export function Contact() {
                 <div className="w-14 h-14 rounded-2xl bg-rally-green-light flex items-center justify-center mx-auto mb-4">
                   <Icon name="check-circle" weight="fill" size={28} className="text-rally-green" />
                 </div>
-                <p className="text-rally-black mb-1" style={{ fontFamily: 'Circular' }}>Message sent</p>
+                <p className="text-rally-black mb-1" style={{ fontFamily: 'CoFo Robert' }}>Message sent</p>
                 <p className="text-sm text-gray-400">Thanks — we'll get back to you soon.</p>
               </div>
             ) : (

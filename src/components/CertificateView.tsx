@@ -19,7 +19,7 @@ export function CertificateView({
   return (
     <div
       className="cert-print relative bg-white mx-auto w-full max-w-[820px] aspect-[1.414/1] p-3 sm:p-5"
-      style={{ fontFamily: 'Circular' }}
+      style={{ fontFamily: 'CoFo Robert' }}
     >
       <div className="relative w-full h-full border-2 border-rally-black p-1.5">
         <div className="w-full h-full border border-rally-border p-6 sm:p-10 flex flex-col items-center text-center relative overflow-hidden">
@@ -42,7 +42,7 @@ export function CertificateView({
           <p className="text-xs sm:text-sm text-gray-400 mb-1 sm:mb-2">This certifies that</p>
           <p
             className="text-2xl sm:text-4xl text-rally-black mb-3 sm:mb-5 px-4 pb-1 border-b-2 border-rally-cream"
-            style={{ fontFamily: 'Circular', letterSpacing: '-0.5px' }}
+            style={{ fontFamily: 'CoFo Robert', letterSpacing: '-0.5px' }}
           >
             {recipientName}
           </p>

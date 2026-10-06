@@ -192,7 +192,7 @@ export function Profile() {
             <div className="w-16 h-16 rounded-2xl bg-white/10" />
           )}
           <div>
-            <p className="text-xl text-white" style={{ fontFamily: 'Circular' }}>{profile.full_name || profile.username}</p>
+            <p className="text-xl text-white" style={{ fontFamily: 'CoFo Robert' }}>{profile.full_name || profile.username}</p>
             <p className="text-xs text-[#999] mt-0.5">{profile.location_text ?? 'No location set'}</p>
           </div>
         </div>
@@ -230,7 +230,7 @@ export function Profile() {
           </div>
 
           <div className="bg-white rounded-3xl border border-rally-border shadow-[0_1px_2px_rgba(17,17,16,0.04)] p-6">
-            <p className="text-sm text-rally-black mb-4 flex items-center gap-1.5" style={{ fontFamily: 'Circular' }}>
+            <p className="text-sm text-rally-black mb-4 flex items-center gap-1.5" style={{ fontFamily: 'CoFo Robert' }}>
               <Icon name="map-pin" weight="fill" size={16} className="text-rally-amber" /> Location
             </p>
             <div className="rounded-2xl overflow-hidden border border-rally-border mb-3 h-40">
@@ -264,7 +264,7 @@ export function Profile() {
           </div>
 
           <div className="bg-white rounded-3xl border border-rally-border shadow-[0_1px_2px_rgba(17,17,16,0.04)] p-6">
-            <p className="text-sm text-rally-black mb-4 flex items-center gap-1.5" style={{ fontFamily: 'Circular' }}>
+            <p className="text-sm text-rally-black mb-4 flex items-center gap-1.5" style={{ fontFamily: 'CoFo Robert' }}>
               <Icon name="wrench" weight="fill" size={16} className="text-rally-amber" /> Professional listing
             </p>
             <div className="flex flex-col gap-3">
@@ -309,7 +309,7 @@ export function Profile() {
           </div>
 
           <div className="bg-white rounded-3xl border border-rally-border shadow-[0_1px_2px_rgba(17,17,16,0.04)] p-6">
-            <p className="text-sm text-rally-black mb-4 flex items-center gap-1.5" style={{ fontFamily: 'Circular' }}>
+            <p className="text-sm text-rally-black mb-4 flex items-center gap-1.5" style={{ fontFamily: 'CoFo Robert' }}>
               <Icon name="medal" weight="fill" size={16} className="text-rally-amber" /> Certificates
             </p>
             {certificates.length === 0 && (
@@ -346,7 +346,7 @@ export function Profile() {
 
           {milestones.length > 0 && (
             <div className="bg-white rounded-3xl border border-rally-border shadow-[0_1px_2px_rgba(17,17,16,0.04)] p-6">
-              <p className="text-sm text-rally-black mb-4 flex items-center gap-1.5" style={{ fontFamily: 'Circular' }}>
+              <p className="text-sm text-rally-black mb-4 flex items-center gap-1.5" style={{ fontFamily: 'CoFo Robert' }}>
                 <Icon name="trophy" weight="fill" size={16} className="text-rally-green" /> Milestones
               </p>
               <div className="grid grid-cols-2 gap-2.5">
@@ -372,7 +372,7 @@ export function Profile() {
         </div>
 
         <div className="bg-white rounded-3xl border border-rally-border shadow-[0_1px_2px_rgba(17,17,16,0.04)] p-6 h-fit">
-          <p className="text-sm text-rally-black mb-4 flex items-center gap-1.5" style={{ fontFamily: 'Circular' }}>
+          <p className="text-sm text-rally-black mb-4 flex items-center gap-1.5" style={{ fontFamily: 'CoFo Robert' }}>
             <Icon name="star" weight="fill" size={16} className="text-rally-amber" /> Reviews
           </p>
 
@@ -385,7 +385,7 @@ export function Profile() {
             <>
               <div className="flex items-center gap-6 mb-6 pb-6 border-b border-rally-border">
                 <div className="text-center">
-                  <p className="text-4xl text-rally-black" style={{ fontFamily: 'Circular' }}>{avgRating.toFixed(1)}</p>
+                  <p className="text-4xl text-rally-black" style={{ fontFamily: 'CoFo Robert' }}>{avgRating.toFixed(1)}</p>
                   <RatingStars value={Math.round(avgRating)} size={14} />
                   <p className="text-[11px] text-gray-400 mt-1">{ratings.length} review{ratings.length === 1 ? '' : 's'}</p>
                 </div>

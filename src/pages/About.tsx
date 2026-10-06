@@ -21,7 +21,7 @@ export function About() {
             <Icon name="compass" weight="fill" size={14} /> About Rally
           </p>
           <h1 className="text-[clamp(2.2rem,4.5vw,3.4rem)] text-rally-black leading-[1.08] mb-8"
-            style={{ fontFamily: 'Circular', letterSpacing: '-1px' }}>
+            style={{ fontFamily: 'CoFo Robert', letterSpacing: '-1px' }}>
             The favour economy already exists.<br />It just lives in group chats.
           </h1>
           <p className="text-gray-500 text-base leading-relaxed mb-6">
@@ -50,21 +50,21 @@ export function About() {
             <div className="w-11 h-11 rounded-2xl bg-rally-amber-light flex items-center justify-center mb-4">
               <Icon name="heart" weight="fill" size={20} className="text-rally-amber" />
             </div>
-            <p className="text-rally-black mb-2" style={{ fontFamily: 'Circular' }}>Neighbourly by default</p>
+            <p className="text-rally-black mb-2" style={{ fontFamily: 'CoFo Robert' }}>Neighbourly by default</p>
             <p className="text-sm text-gray-400 leading-relaxed">No bidding wars, no algorithmic feed — just people nearby who need or can give a hand.</p>
           </div>
           <div className="bg-white rounded-3xl border border-rally-border p-6 shadow-[0_1px_2px_rgba(17,17,16,0.04)] hover:shadow-[0_12px_32px_rgba(17,17,16,0.08)] hover:-translate-y-0.5 transition-all duration-300">
             <div className="w-11 h-11 rounded-2xl bg-rally-green-light flex items-center justify-center mb-4">
               <Icon name="users-three" weight="fill" size={20} className="text-rally-green" />
             </div>
-            <p className="text-rally-black mb-2" style={{ fontFamily: 'Circular' }}>Fair, not first-come</p>
+            <p className="text-rally-black mb-2" style={{ fontFamily: 'CoFo Robert' }}>Fair, not first-come</p>
             <p className="text-sm text-gray-400 leading-relaxed">When more people apply than there's room for, one is picked at random. No favourites.</p>
           </div>
           <div className="bg-rally-black rounded-3xl p-6 shadow-[0_1px_2px_rgba(17,17,16,0.04)] hover:shadow-[0_12px_32px_rgba(17,17,16,0.18)] hover:-translate-y-0.5 transition-all duration-300">
             <div className="w-11 h-11 rounded-2xl bg-white/10 flex items-center justify-center mb-4">
               <Icon name="handshake" weight="fill" size={20} className="text-white" />
             </div>
-            <p className="text-white mb-2" style={{ fontFamily: 'Circular' }}>Connection, not a cut</p>
+            <p className="text-white mb-2" style={{ fontFamily: 'CoFo Robert' }}>Connection, not a cut</p>
             <p className="text-sm text-[#999] leading-relaxed">We don't process payments or take a fee. We just help you find each other.</p>
           </div>
         </div>

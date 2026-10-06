@@ -121,7 +121,7 @@ export function Home() {
         />
         <div className="relative flex items-start justify-between">
           <div>
-            <h1 className="text-3xl md:text-4xl text-white" style={{ fontFamily: 'Circular', letterSpacing: '-0.4px' }}>
+            <h1 className="text-3xl md:text-4xl text-white" style={{ fontFamily: 'CoFo Robert', letterSpacing: '-0.4px' }}>
               {me?.full_name ? `Hi, ${me.full_name.split(' ')[0]}` : 'Hi there'}
             </h1>
             {me?.location_text && (
