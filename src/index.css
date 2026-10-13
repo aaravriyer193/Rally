@@ -8,6 +8,27 @@
   font-display: swap;
 }
 
+/* CoFo Robert has a smaller cap height than Circular, so it reads small at the
+   same px size. size-adjust scales the face itself, which keeps the existing
+   Tailwind size ramp intact. Both weights carry it so they stay consistent. */
+@font-face {
+  font-family: "CoFo Robert";
+  src: url("/fonts/CoFo_Robert-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  size-adjust: 115%;
+}
+
+@font-face {
+  font-family: "CoFo Robert";
+  src: url("/fonts/CoFo_Robert-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  size-adjust: 115%;
+}
+
 @theme {
   --font-quest: "Circular", sans-serif;
   --color-rally-black: #111110;

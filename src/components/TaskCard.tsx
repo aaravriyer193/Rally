@@ -18,7 +18,7 @@ export function TaskCard({ task, distanceKm }: { task: Task; distanceKm?: number
       <div className="p-4">
         <div className="flex items-start justify-between gap-3">
           <div>
-            <p className="text-sm text-rally-black" style={{ fontFamily: 'Circular' }}>{task.title}</p>
+            <p className="text-sm text-rally-black" style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}>{task.title}</p>
             <p className="text-xs text-gray-400 mt-0.5">{task.poster?.full_name || task.poster?.username || 'Neighbour'}</p>
           </div>
           {task.category && (

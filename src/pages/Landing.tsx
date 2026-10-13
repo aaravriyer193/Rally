@@ -10,7 +10,7 @@ function FeatureCard({ icon, tint, title, desc }: { icon: React.ReactNode; tint:
       <div className={`w-11 h-11 rounded-2xl flex items-center justify-center mb-5 ${tint}`}>
         {icon}
       </div>
-      <h3 className="text-rally-black text-lg mb-2" style={{ fontFamily: 'Circular' }}>{title}</h3>
+      <h3 className="text-rally-black text-lg mb-2" style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}>{title}</h3>
       <p className="text-gray-400 text-sm leading-relaxed">{desc}</p>
     </div>
   )
@@ -19,7 +19,7 @@ function FeatureCard({ icon, tint, title, desc }: { icon: React.ReactNode; tint:
 function StatusBar() {
   return (
     <div className="h-9 flex items-center justify-between px-5 pt-1 text-[10px] text-rally-black flex-shrink-0">
-      <span style={{ fontFamily: 'Circular' }}>9:41</span>
+      <span style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}>9:41</span>
       <div className="flex items-center gap-1">
         <Icon name="cell-signal-full" size={11} />
         <Icon name="wifi-high" size={11} />
@@ -34,24 +34,24 @@ function HomeScreenMock() {
     <div className="h-full flex flex-col bg-rally-cream">
       <StatusBar />
       <div className="bg-rally-black px-4 pt-2 pb-5 flex-shrink-0">
-        <p className="text-white text-xl" style={{ fontFamily: 'Circular' }}>Hi, Alex</p>
+        <p className="text-white text-xl" style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}>Hi, Alex</p>
         <p className="text-[10px] text-[#999] mt-1 flex items-center gap-1"><Icon name="map-pin" weight="fill" size={10} className="text-rally-amber" /> Near Riverside</p>
       </div>
       <div className="px-4 pt-3 flex gap-1.5 flex-shrink-0">
-        <span className="text-[9px] bg-rally-black text-white px-2.5 py-1 rounded-full" style={{ fontFamily: 'Circular' }}>Tasks near you</span>
+        <span className="text-[9px] bg-rally-black text-white px-2.5 py-1 rounded-full" style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}>Tasks near you</span>
         <span className="text-[9px] bg-white border border-rally-border text-gray-500 px-2.5 py-1 rounded-full">Find a pro</span>
       </div>
       <div className="px-4 pt-3 flex flex-col gap-2 flex-1">
         <div className="bg-white rounded-2xl border border-rally-border p-3">
           <div className="flex items-start justify-between">
-            <p className="text-[11px] text-rally-black" style={{ fontFamily: 'Circular' }}>Mow the lawn this weekend</p>
+            <p className="text-[11px] text-rally-black" style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}>Mow the lawn this weekend</p>
             <span className="text-[7px] bg-rally-cream text-gray-500 px-1.5 py-0.5 rounded-full flex-shrink-0">Yard</span>
           </div>
           <p className="text-[9px] text-gray-400 mt-1">Mrs. Patel · 0.3 mi</p>
         </div>
         <div className="bg-white rounded-2xl border border-rally-border p-3">
           <div className="flex items-start justify-between">
-            <p className="text-[11px] text-rally-black" style={{ fontFamily: 'Circular' }}>Grocery run</p>
+            <p className="text-[11px] text-rally-black" style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}>Grocery run</p>
             <span className="text-[7px] bg-rally-cream text-gray-500 px-1.5 py-0.5 rounded-full flex-shrink-0">Errands</span>
           </div>
           <p className="text-[9px] text-gray-400 mt-1">Mr. Okonkwo · 0.5 mi</p>
@@ -61,7 +61,7 @@ function HomeScreenMock() {
             <div className="w-5 h-5 rounded-lg bg-white/10 flex items-center justify-center">
               <Icon name="wrench" weight="fill" size={10} className="text-white" />
             </div>
-            <p className="text-[10px] text-white" style={{ fontFamily: 'Circular' }}>Marcus T. — Electrician</p>
+            <p className="text-[10px] text-white" style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}>Marcus T. — Electrician</p>
           </div>
           <p className="text-[9px] text-[#999]">$65/hr · Riverside</p>
         </div>
@@ -81,15 +81,15 @@ function MatchScreenMock() {
       <div className="px-4 pt-4 flex-1">
         <div className="bg-white rounded-2xl border border-rally-border p-3.5">
           <span className="text-[8px] bg-rally-green-light text-rally-green px-2 py-0.5 rounded-full">Filled — matched</span>
-          <p className="text-[13px] text-rally-black mt-2" style={{ fontFamily: 'Circular' }}>Mow the lawn this weekend</p>
-          <p className="text-[18px] text-rally-black mt-1" style={{ fontFamily: 'Circular' }}>Unpaid</p>
+          <p className="text-[13px] text-rally-black mt-2" style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}>Mow the lawn this weekend</p>
+          <p className="text-[18px] text-rally-black mt-1" style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}>Unpaid</p>
 
           <div className="bg-rally-cream rounded-xl p-2.5 mt-3 flex items-center gap-2">
             <div className="w-7 h-7 rounded-full bg-white flex items-center justify-center flex-shrink-0">
               <Icon name="user" size={12} className="text-rally-border" />
             </div>
             <div className="flex-1 min-w-0">
-              <p className="text-[10px] text-rally-black" style={{ fontFamily: 'Circular' }}>Jordan Rivera</p>
+              <p className="text-[10px] text-rally-black" style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}>Jordan Rivera</p>
               <p className="text-[8px] text-gray-400">You&apos;re matched!</p>
             </div>
             <div className="flex items-center gap-0.5 bg-rally-green-light text-rally-green px-2 py-1 rounded-lg flex-shrink-0">
@@ -99,7 +99,7 @@ function MatchScreenMock() {
           </div>
 
           <div className="bg-rally-black text-white text-center rounded-xl py-2.5 mt-3">
-            <span className="text-[10px]" style={{ fontFamily: 'Circular' }}>Confirm task is done</span>
+            <span className="text-[10px]" style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}>Confirm task is done</span>
           </div>
         </div>
       </div>
@@ -121,7 +121,7 @@ function CertScreenMock() {
             <Icon name="seal-check" weight="fill" size={16} className="text-rally-black mb-2" />
             <p className="text-[7px] tracking-[0.15em] text-rally-amber uppercase">Certificate of Service</p>
             <p className="text-[8px] text-gray-400 mt-2">This certifies that</p>
-            <p className="text-[15px] text-rally-black mt-1 pb-1 border-b border-rally-cream px-3" style={{ fontFamily: 'Circular' }}>Jordan Rivera</p>
+            <p className="text-[15px] text-rally-black mt-1 pb-1 border-b border-rally-cream px-3" style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}>Jordan Rivera</p>
             <p className="text-[7px] text-gray-500 mt-2 leading-relaxed">completed 25+ hours of volunteer service on Rally</p>
           </div>
         </div>
@@ -135,7 +135,7 @@ function ProScreenMock() {
     <div className="h-full flex flex-col bg-rally-cream">
       <StatusBar />
       <div className="px-4 pt-2 flex-shrink-0">
-        <p className="text-rally-black text-xl" style={{ fontFamily: 'Circular' }}>Find a pro</p>
+        <p className="text-rally-black text-xl" style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}>Find a pro</p>
       </div>
       <div className="px-4 pt-2 flex gap-1.5 overflow-hidden flex-shrink-0">
         {['All', 'Electrical', 'Plumbing', 'Tutoring'].map((c, i) => (
@@ -149,7 +149,7 @@ function ProScreenMock() {
               <Icon name="wrench" size={13} className="text-rally-amber" />
             </div>
             <div className="flex-1 min-w-0">
-              <p className="text-[10px] text-rally-black" style={{ fontFamily: 'Circular' }}>{p[0]}</p>
+              <p className="text-[10px] text-rally-black" style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}>{p[0]}</p>
               <p className="text-[8px] text-gray-400">{p[1]}</p>
             </div>
             <span className="text-[9px] text-rally-black flex-shrink-0">{p[2]}</span>
@@ -173,8 +173,8 @@ function FeatureRow({
   return (
     <div className={`grid md:grid-cols-2 gap-10 md:gap-16 items-center ${reverse ? 'md:[&>*:first-child]:order-2' : ''}`}>
       <div>
-        <p className="text-xs text-rally-amber uppercase tracking-[0.2em] mb-3" style={{ fontFamily: 'Circular' }}>{eyebrow}</p>
-        <h2 className="text-3xl text-rally-black mb-4" style={{ fontFamily: 'Circular', letterSpacing: '-0.4px' }}>{title}</h2>
+        <p className="text-xs text-rally-amber uppercase tracking-[0.2em] mb-3" style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}>{eyebrow}</p>
+        <h2 className="text-3xl text-rally-black mb-4" style={{ fontFamily: 'CoFo Robert', fontWeight: 500, letterSpacing: '-0.4px' }}>{title}</h2>
         <p className="text-gray-400 text-base leading-relaxed mb-6 max-w-md">{desc}</p>
         <ul className="space-y-2.5">
           {points.map((p) => (
@@ -208,7 +208,7 @@ export function Landing() {
               Built for DofE, CAS, and good neighbours
             </div>
             <h1 className="text-[clamp(2rem,3.8vw,3.4rem)] text-rally-black leading-[1.08] mb-6"
-              style={{ fontFamily: 'Circular', letterSpacing: '-1px' }}>
+              style={{ fontFamily: 'CoFo Robert', fontWeight: 500, letterSpacing: '-1px' }}>
               Your community,<br />actually connected.
             </h1>
             <p className="text-gray-400 text-lg max-w-lg mb-10 leading-relaxed">
@@ -219,7 +219,7 @@ export function Landing() {
               <Link
                 to="/sign-in"
                 className="inline-flex items-center gap-3 bg-rally-black text-white rounded-2xl px-8 py-4 text-base hover:opacity-90 transition-opacity shadow-[0_8px_24px_rgba(17,17,16,0.18)]"
-                style={{ fontFamily: 'Circular' }}
+                style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}
               >
                 Get started
                 <Icon name="arrow-right" weight="bold" size={16} />
@@ -288,7 +288,7 @@ export function Landing() {
 
       {/* Feature grid */}
       <section id="how-it-works" className="max-w-6xl mx-auto px-8 py-24 scroll-mt-20">
-        <h2 className="text-3xl text-rally-black mb-3 text-center" style={{ fontFamily: 'Circular', letterSpacing: '-0.5px' }}>
+        <h2 className="text-3xl text-rally-black mb-3 text-center" style={{ fontFamily: 'CoFo Robert', fontWeight: 500, letterSpacing: '-0.5px' }}>
           How it works
         </h2>
         <p className="text-gray-400 text-sm text-center mb-10 max-w-md mx-auto">
@@ -324,7 +324,7 @@ export function Landing() {
             style={{ background: 'radial-gradient(circle, #F5A623 0%, transparent 70%)' }}
           />
           <div className="relative">
-            <p className="text-2xl text-white mb-6" style={{ fontFamily: 'Circular', letterSpacing: '-0.3px' }}>Ready to rally your street?</p>
+            <p className="text-2xl text-white mb-6" style={{ fontFamily: 'CoFo Robert', fontWeight: 500, letterSpacing: '-0.3px' }}>Ready to rally your street?</p>
             <Link
               to="/sign-in"
               className="inline-flex items-center gap-2 bg-white text-rally-black rounded-2xl px-8 py-4 text-sm hover:opacity-90 transition-opacity"
