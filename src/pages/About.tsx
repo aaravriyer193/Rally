@@ -2,6 +2,22 @@ import { Icon } from '../components/Icon'
 import { MarketingNav } from '../components/MarketingNav'
 import { MarketingFooter } from '../components/MarketingFooter'
 
+const TEAM = [
+  'Hriday Navin',
+  'Aarav Iyer',
+  'Saijayant Govarnadan',
+  'Aarav Khandelwal',
+  'Yashvin Srinivas Perla',
+]
+
+const TINTS = [
+  'bg-rally-amber-light text-rally-amber',
+  'bg-rally-green-light text-rally-green',
+  'bg-rally-cream text-rally-black',
+  'bg-rally-amber-light text-rally-amber',
+  'bg-rally-green-light text-rally-green',
+]
+
 export function About() {
   return (
     <div className="min-h-screen bg-rally-cream flex flex-col">
@@ -67,6 +83,38 @@ export function About() {
             <p className="text-white mb-2" style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}>Connection, not a cut</p>
             <p className="text-sm text-[#999] leading-relaxed">We don't process payments or take a fee. We just help you find each other.</p>
           </div>
+        </div>
+      </section>
+
+      <section className="max-w-5xl mx-auto px-8 pb-24 w-full">
+        <p className="text-xs text-rally-amber uppercase tracking-wide mb-4 flex items-center gap-1.5">
+          <Icon name="users-three" weight="fill" size={14} /> The team
+        </p>
+        <h2 className="text-3xl text-rally-black mb-3" style={{ fontFamily: 'CoFo Robert', fontWeight: 500, letterSpacing: '-0.5px' }}>
+          Five of us built this
+        </h2>
+        <p className="text-gray-500 text-base leading-relaxed mb-10 max-w-2xl">
+          Rally started as our entry to the Freshmen&apos;s Entrepreneurship and Innovation Programme, built
+          around the UN Sustainable Development Goals. We picked the favour economy because every one of us
+          had already watched it happen badly in a group chat.
+        </p>
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+          {TEAM.map((member, i) => (
+            <div
+              key={member}
+              className="bg-white rounded-3xl border border-rally-border p-5 text-center shadow-[0_1px_2px_rgba(17,17,16,0.04)] hover:shadow-[0_12px_32px_rgba(17,17,16,0.08)] hover:-translate-y-0.5 transition-all duration-300"
+            >
+              <div className={`w-14 h-14 rounded-2xl mx-auto mb-4 flex items-center justify-center ${TINTS[i % TINTS.length]}`}>
+                <span className="text-base" style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}>
+                  {member.split(' ').map((w) => w[0]).slice(0, 2).join('')}
+                </span>
+              </div>
+              <p className="text-rally-black text-sm leading-snug" style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}>
+                {member}
+              </p>
+            </div>
+          ))}
         </div>
       </section>
 
