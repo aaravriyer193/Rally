@@ -35,7 +35,7 @@ function Avatar({ p, size }: { p: Profile; size: string }) {
   return p.avatar_url ? (
     <img src={p.avatar_url} alt="" className={`${size} rounded-full object-cover bg-rally-cream`} />
   ) : (
-    <div className={`${size} rounded-full bg-rally-cream flex items-center justify-center text-gray-400`} style={{ fontFamily: 'CoFo Robert' }}>
+    <div className={`${size} rounded-full bg-rally-cream flex items-center justify-center text-gray-400`} style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}>
       {(p.full_name || p.username || '?')[0]?.toUpperCase()}
     </div>
   )
@@ -73,7 +73,7 @@ export function Leaderboard() {
           </button>
           <div className="flex items-center gap-2">
             <Icon name="trophy" weight="fill" size={20} className="text-rally-amber" />
-            <h1 className="text-lg text-white" style={{ fontFamily: 'CoFo Robert' }}>Leaderboard</h1>
+            <h1 className="text-lg text-white" style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}>Leaderboard</h1>
           </div>
         </div>
         <p className="relative text-xs text-white/50 max-w-md">Ranked by points earned helping neighbours — every completed task, every certificate.</p>
@@ -92,7 +92,7 @@ export function Leaderboard() {
                   {i === 0 && <Icon name="crown-simple" weight="fill" size={26} className={`${s.crown} mb-1`} />}
                   <div className={`relative rounded-full ${s.ring}`}>
                     <Avatar p={p} size={s.avatarSize} />
-                    <span className={`absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-6 h-6 rounded-full text-[11px] flex items-center justify-center ${s.badge}`} style={{ fontFamily: 'CoFo Robert' }}>
+                    <span className={`absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-6 h-6 rounded-full text-[11px] flex items-center justify-center ${s.badge}`} style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}>
                       {i + 1}
                     </span>
                   </div>
@@ -123,7 +123,7 @@ export function Leaderboard() {
                   isMe ? 'bg-rally-amber-light border-rally-amber' : 'bg-white border-rally-border'
                 }`}
               >
-                <span className="w-7 h-7 rounded-full flex items-center justify-center text-xs flex-shrink-0 text-gray-400" style={{ fontFamily: 'CoFo Robert' }}>
+                <span className="w-7 h-7 rounded-full flex items-center justify-center text-xs flex-shrink-0 text-gray-400" style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}>
                   {rank}
                 </span>
                 <Avatar p={p} size="w-9 h-9" />

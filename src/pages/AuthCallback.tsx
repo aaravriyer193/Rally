@@ -56,7 +56,7 @@ export function AuthCallback() {
           <div className="w-12 h-12 rounded-2xl bg-rally-amber-light flex items-center justify-center mx-auto mb-4">
             <Icon name="warning-circle" weight="fill" size={22} className="text-rally-amber" />
           </div>
-          <p className="text-rally-black mb-2" style={{ fontFamily: 'CoFo Robert' }}>Sign-in didn't go through</p>
+          <p className="text-rally-black mb-2" style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}>Sign-in didn't go through</p>
           <p className="text-sm text-gray-400 mb-6">{error}</p>
           <Link to="/sign-in" className="inline-block bg-rally-black text-white rounded-2xl px-6 py-3 text-sm">
             Try again

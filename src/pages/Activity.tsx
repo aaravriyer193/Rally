@@ -43,7 +43,7 @@ export function Activity() {
         <button onClick={() => navigate(-1)} className="p-1 md:hidden">
           <Icon name="arrow-left" size={20} className="text-rally-black" />
         </button>
-        <h1 className="text-lg text-rally-black" style={{ fontFamily: 'CoFo Robert' }}>Activity</h1>
+        <h1 className="text-lg text-rally-black" style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}>Activity</h1>
       </div>
 
       <div className="px-5 md:px-10 pt-6 max-w-3xl mx-auto md:mx-0">
@@ -51,7 +51,7 @@ export function Activity() {
 
         {!loading && (
           <>
-            <p className="text-sm text-rally-black mb-3" style={{ fontFamily: 'CoFo Robert' }}>Tasks you posted</p>
+            <p className="text-sm text-rally-black mb-3" style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}>Tasks you posted</p>
             {posted.length === 0 && (
               <div className="flex flex-col items-center text-center py-8 mb-8 bg-white rounded-3xl border-2 border-dashed border-rally-border">
                 <EmptyState variant="tasks" className="w-24 h-24 mb-1" />
@@ -64,7 +64,7 @@ export function Activity() {
               </div>
             )}
 
-            <p className="text-sm text-rally-black mb-3" style={{ fontFamily: 'CoFo Robert' }}>Your applications</p>
+            <p className="text-sm text-rally-black mb-3" style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}>Your applications</p>
             {applications.length === 0 && (
               <div className="flex flex-col items-center text-center py-8 bg-white rounded-3xl border-2 border-dashed border-rally-border">
                 <EmptyState variant="search" className="w-24 h-24 mb-1" />

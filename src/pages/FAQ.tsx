@@ -38,7 +38,7 @@ function Item({ q, a }: { q: string; a: string }) {
         onClick={() => setOpen((o) => !o)}
         className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left"
       >
-        <span className="text-rally-black text-sm sm:text-base" style={{ fontFamily: 'CoFo Robert' }}>{q}</span>
+        <span className="text-rally-black text-sm sm:text-base" style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}>{q}</span>
         <span className={`flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center transition-all duration-200 ${open ? 'bg-rally-black text-white rotate-180' : 'bg-rally-cream text-gray-400'}`}>
           <Icon name="caret-down" weight="bold" size={13} />
         </span>
@@ -66,7 +66,7 @@ export function FAQ() {
           <p className="text-xs text-rally-amber uppercase tracking-wide mb-4 text-center flex items-center justify-center gap-1.5">
             <Icon name="question" weight="fill" size={14} /> FAQ
           </p>
-          <h1 className="text-3xl text-rally-black mb-12 text-center" style={{ fontFamily: 'CoFo Robert', letterSpacing: '-0.5px' }}>
+          <h1 className="text-3xl text-rally-black mb-12 text-center" style={{ fontFamily: 'CoFo Robert', fontWeight: 500, letterSpacing: '-0.5px' }}>
             Questions, answered
           </h1>
           <div className="flex flex-col gap-3">

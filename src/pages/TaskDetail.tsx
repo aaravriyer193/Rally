@@ -34,7 +34,7 @@ function ContactCard({
         </div>
       )}
       <div className="flex-1 min-w-0">
-        <p className="text-sm text-rally-black truncate" style={{ fontFamily: 'CoFo Robert' }}>
+        <p className="text-sm text-rally-black truncate" style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}>
           {displayName(profile)}
         </p>
         <p className="text-xs text-gray-400">{label}</p>
@@ -214,11 +214,11 @@ export function TaskDetail() {
               {status && (
                 <span className={`inline-block text-[11px] px-2.5 py-1 rounded-full mb-3 ${status.tint}`}>{status.text}</span>
               )}
-              <h1 className="text-2xl text-rally-black leading-tight mb-3" style={{ fontFamily: 'CoFo Robert', letterSpacing: '-0.3px' }}>
+              <h1 className="text-2xl text-rally-black leading-tight mb-3" style={{ fontFamily: 'CoFo Robert', fontWeight: 500, letterSpacing: '-0.3px' }}>
                 {task.title}
               </h1>
 
-              <p className="text-3xl text-rally-black mb-1" style={{ fontFamily: 'CoFo Robert' }}>
+              <p className="text-3xl text-rally-black mb-1" style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}>
                 {task.budget != null ? `$${task.budget}` : 'Unpaid'}
               </p>
               <p className="text-xs text-gray-400 mb-5">{task.budget != null ? 'Suggested — agree details with the poster' : 'Volunteer task — earns certificate hours'}</p>
@@ -303,7 +303,7 @@ export function TaskDetail() {
 
               {isPoster && task.status === 'open' && (
                 <div>
-                  <p className="text-sm text-rally-black mb-2" style={{ fontFamily: 'CoFo Robert' }}>Applicants ({applications.length})</p>
+                  <p className="text-sm text-rally-black mb-2" style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}>Applicants ({applications.length})</p>
                   {applications.length === 0 && <p className="text-xs text-gray-400">No applicants yet.</p>}
                   <div className="flex flex-col gap-2">
                     {applications.map((a) => (
@@ -361,7 +361,7 @@ export function TaskDetail() {
         </div>
 
         <div className="bg-white rounded-3xl border border-rally-border p-6">
-          <p className="text-sm text-rally-black mb-2" style={{ fontFamily: 'CoFo Robert' }}>Description</p>
+          <p className="text-sm text-rally-black mb-2" style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}>Description</p>
           <p className="text-sm text-gray-600 leading-relaxed">{task.description || 'No description provided.'}</p>
         </div>
 

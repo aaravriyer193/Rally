@@ -74,12 +74,12 @@ export function ProfessionalDetail() {
               <span className="inline-block text-[11px] px-2.5 py-1 rounded-full mb-3 bg-rally-amber-light text-rally-amber">
                 {listing.category}
               </span>
-              <h1 className="text-2xl text-rally-black leading-tight mb-3" style={{ fontFamily: 'CoFo Robert', letterSpacing: '-0.3px' }}>
+              <h1 className="text-2xl text-rally-black leading-tight mb-3" style={{ fontFamily: 'CoFo Robert', fontWeight: 500, letterSpacing: '-0.3px' }}>
                 {name}
               </h1>
 
               {listing.price_note && (
-                <p className="text-3xl text-rally-black mb-1" style={{ fontFamily: 'CoFo Robert' }}>{listing.price_note}</p>
+                <p className="text-3xl text-rally-black mb-1" style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}>{listing.price_note}</p>
               )}
               <p className="text-xs text-gray-400 mb-5">Contact-only — any payment is arranged directly with {name.split(' ')[0]}.</p>
 
@@ -111,7 +111,7 @@ export function ProfessionalDetail() {
         </div>
 
         <div className="bg-white rounded-3xl border border-rally-border p-6">
-          <p className="text-sm text-rally-black mb-2" style={{ fontFamily: 'CoFo Robert' }}>About</p>
+          <p className="text-sm text-rally-black mb-2" style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}>About</p>
           <p className="text-sm text-gray-600 leading-relaxed">{listing.description || 'No description provided.'}</p>
         </div>
 

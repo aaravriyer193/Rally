@@ -28,7 +28,7 @@ export function MarketingFooter() {
           <div className="col-span-2 md:col-span-1">
             <div className="flex items-center gap-2 text-rally-black mb-3">
               <RallyIcon size={24} />
-              <span className="text-lg" style={{ fontFamily: 'CoFo Robert' }}>Rally</span>
+              <span className="text-lg" style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}>Rally</span>
             </div>
             <p className="text-sm text-gray-400 leading-relaxed max-w-[220px]">
               A little more neighbourly. Built for the street you actually live on.

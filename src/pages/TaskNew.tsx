@@ -98,7 +98,7 @@ export function TaskNew() {
           <button onClick={() => navigate(-1)} className="flex items-center gap-1.5 text-sm text-gray-400 mb-4 md:hidden">
             <Icon name="arrow-left" size={16} /> Back
           </button>
-          <h1 className="text-3xl text-rally-black mb-1" style={{ fontFamily: 'CoFo Robert', letterSpacing: '-0.4px' }}>Post a task</h1>
+          <h1 className="text-3xl text-rally-black mb-1" style={{ fontFamily: 'CoFo Robert', fontWeight: 500, letterSpacing: '-0.4px' }}>Post a task</h1>
           <p className="text-sm text-gray-400 mb-8">Tell your neighbours what you need — the more detail, the better the match.</p>
 
           <div className="bg-white rounded-3xl border border-rally-border shadow-[0_1px_2px_rgba(17,17,16,0.04)] p-6 md:p-8 flex flex-col gap-5">
@@ -209,7 +209,7 @@ export function TaskNew() {
               <div>
                 <div className="flex items-center justify-between mb-1.5">
                   <label className="text-xs text-gray-400">{frequency === 'recurring' ? 'Hours per session' : 'Estimated hours'}</label>
-                  <span className="text-sm text-rally-black" style={{ fontFamily: 'CoFo Robert' }}>{durationHours}h</span>
+                  <span className="text-sm text-rally-black" style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}>{durationHours}h</span>
                 </div>
                 <input
                   type="range"
@@ -251,7 +251,7 @@ export function TaskNew() {
                 <div>
                   <div className="flex items-center justify-between mb-1.5">
                     <span className="text-xs text-gray-400">Suggested budget</span>
-                    <span className="text-2xl text-rally-black" style={{ fontFamily: 'CoFo Robert' }}>${budget}</span>
+                    <span className="text-2xl text-rally-black" style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}>${budget}</span>
                   </div>
                   <input
                     type="range"
@@ -276,7 +276,7 @@ export function TaskNew() {
               disabled={!title.trim() || saving}
               onClick={submit}
               className="w-full bg-rally-black text-white rounded-2xl px-6 py-3.5 text-sm disabled:opacity-30 hover:opacity-90 transition-opacity"
-              style={{ fontFamily: 'CoFo Robert' }}
+              style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}
             >
               {saving ? 'Posting…' : 'Post task'}
             </button>

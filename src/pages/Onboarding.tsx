@@ -126,7 +126,7 @@ export function Onboarding() {
 
       <div className="px-6 pt-10 pb-6 flex items-center gap-2 relative">
         <RallyIcon size={22} className="text-rally-black" />
-        <span className="text-base text-rally-black" style={{ fontFamily: 'CoFo Robert' }}>Rally</span>
+        <span className="text-base text-rally-black" style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}>Rally</span>
       </div>
 
       <div className="flex-1 px-6 flex flex-col justify-center relative pb-10">
@@ -140,7 +140,7 @@ export function Onboarding() {
           <div className="bg-white rounded-3xl border border-rally-border shadow-[0_20px_50px_rgba(17,17,16,0.06)] p-7">
             {step === 'role' && (
               <div>
-                <h1 className="text-2xl text-rally-black mb-2" style={{ fontFamily: 'CoFo Robert' }}>What brings you here?</h1>
+                <h1 className="text-2xl text-rally-black mb-2" style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}>What brings you here?</h1>
                 <p className="text-sm text-gray-400 mb-8">You can always do both later — this just sets your starting view.</p>
                 <div className="flex flex-col gap-3">
                   <button
@@ -150,7 +150,7 @@ export function Onboarding() {
                     <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center mb-3">
                       <Icon name="heart" weight="fill" size={18} className="text-rally-amber" />
                     </div>
-                    <p className="text-rally-black" style={{ fontFamily: 'CoFo Robert' }}>I give help</p>
+                    <p className="text-rally-black" style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}>I give help</p>
                     <p className="text-xs text-gray-400 mt-1">Volunteer for tasks or offer your professional services</p>
                   </button>
                   <button
@@ -160,7 +160,7 @@ export function Onboarding() {
                     <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center mb-3">
                       <Icon name="hand-waving" weight="fill" size={18} className="text-rally-green" />
                     </div>
-                    <p className="text-rally-black" style={{ fontFamily: 'CoFo Robert' }}>I need help</p>
+                    <p className="text-rally-black" style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}>I need help</p>
                     <p className="text-xs text-gray-400 mt-1">Post a task for a volunteer, or find a local pro</p>
                   </button>
                 </div>
@@ -172,7 +172,7 @@ export function Onboarding() {
                 <button onClick={() => goTo('role')} className="flex items-center gap-1 text-xs text-gray-400 mb-6">
                   <Icon name="arrow-left" size={12} /> Back
                 </button>
-                <h1 className="text-2xl text-rally-black mb-2" style={{ fontFamily: 'CoFo Robert' }}>
+                <h1 className="text-2xl text-rally-black mb-2" style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}>
                   {intent === 'give' ? 'How do you want to help?' : 'What kind of help do you need?'}
                 </h1>
                 <p className="text-sm text-gray-400 mb-8">
@@ -185,7 +185,7 @@ export function Onboarding() {
                     onClick={() => pickSubrole('volunteer')}
                     className="text-left bg-rally-cream rounded-2xl border border-rally-border p-5 hover:border-rally-black hover:shadow-md transition-all"
                   >
-                    <p className="text-rally-black" style={{ fontFamily: 'CoFo Robert' }}>
+                    <p className="text-rally-black" style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}>
                       {intent === 'give' ? 'As a volunteer' : 'A volunteer'}
                     </p>
                     <p className="text-xs text-gray-400 mt-1">
@@ -196,7 +196,7 @@ export function Onboarding() {
                     onClick={() => pickSubrole('professional')}
                     className="text-left bg-rally-cream rounded-2xl border border-rally-border p-5 hover:border-rally-black hover:shadow-md transition-all"
                   >
-                    <p className="text-rally-black" style={{ fontFamily: 'CoFo Robert' }}>
+                    <p className="text-rally-black" style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}>
                       {intent === 'give' ? 'As a professional' : 'A professional'}
                     </p>
                     <p className="text-xs text-gray-400 mt-1">
@@ -212,7 +212,7 @@ export function Onboarding() {
                 <button onClick={() => goTo('subrole')} className="flex items-center gap-1 text-xs text-gray-400 mb-6">
                   <Icon name="arrow-left" size={12} /> Back
                 </button>
-                <h1 className="text-2xl text-rally-black mb-2" style={{ fontFamily: 'CoFo Robert' }}>What's your number?</h1>
+                <h1 className="text-2xl text-rally-black mb-2" style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}>What's your number?</h1>
                 <p className="text-sm text-gray-400 mb-8">Only shared once you're matched with someone — never public.</p>
                 <input
                   type="tel"
@@ -236,7 +236,7 @@ export function Onboarding() {
                 <button onClick={() => goTo('phone')} className="flex items-center gap-1 text-xs text-gray-400 mb-6">
                   <Icon name="arrow-left" size={12} /> Back
                 </button>
-                <h1 className="text-2xl text-rally-black mb-2" style={{ fontFamily: 'CoFo Robert' }}>Where are you?</h1>
+                <h1 className="text-2xl text-rally-black mb-2" style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}>Where are you?</h1>
                 <p className="text-sm text-gray-400 mb-4">
                   {locating ? 'Finding you on the map…' : 'Type a place or drag the pin — either way sets what "nearby" means for you.'}
                 </p>
