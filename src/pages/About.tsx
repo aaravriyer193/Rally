@@ -2,20 +2,12 @@ import { Icon } from '../components/Icon'
 import { MarketingNav } from '../components/MarketingNav'
 import { MarketingFooter } from '../components/MarketingFooter'
 
-const TEAM = [
-  'Hriday Navin',
-  'Aarav Iyer',
-  'Saijayant Govarnadan',
-  'Aarav Khandelwal',
-  'Yashvin Srinivas Perla',
-]
-
-const TINTS = [
-  'bg-rally-amber-light text-rally-amber',
-  'bg-rally-green-light text-rally-green',
-  'bg-rally-cream text-rally-black',
-  'bg-rally-amber-light text-rally-amber',
-  'bg-rally-green-light text-rally-green',
+const TEAM: { name: string; photo?: string }[] = [
+  { name: 'Hriday Navin', photo: '/team/hriday-navin.jpg' },
+  { name: 'Aarav Iyer', photo: '/team/aarav-iyer.jpg' },
+  { name: 'Saijayant Govarnadan' },
+  { name: 'Aarav Khandelwal', photo: '/team/aarav-khandelwal.jpg' },
+  { name: 'Yashvin Srinivas Perla', photo: '/team/yashvin-perla.jpg' },
 ]
 
 export function About() {
@@ -100,18 +92,27 @@ export function About() {
         </p>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
-          {TEAM.map((member, i) => (
+          {TEAM.map((member) => (
             <div
-              key={member}
-              className="bg-white rounded-3xl border border-rally-border p-5 text-center shadow-[0_1px_2px_rgba(17,17,16,0.04)] hover:shadow-[0_12px_32px_rgba(17,17,16,0.08)] hover:-translate-y-0.5 transition-all duration-300"
+              key={member.name}
+              className="bg-white rounded-3xl border border-rally-border p-4 text-center shadow-[0_1px_2px_rgba(17,17,16,0.04)] hover:shadow-[0_12px_32px_rgba(17,17,16,0.08)] hover:-translate-y-0.5 transition-all duration-300"
             >
-              <div className={`w-14 h-14 rounded-2xl mx-auto mb-4 flex items-center justify-center ${TINTS[i % TINTS.length]}`}>
-                <span className="text-base" style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}>
-                  {member.split(' ').map((w) => w[0]).slice(0, 2).join('')}
-                </span>
-              </div>
+              {member.photo ? (
+                <img
+                  src={member.photo}
+                  alt={member.name}
+                  loading="lazy"
+                  width={520}
+                  height={520}
+                  className="w-full aspect-square object-cover rounded-2xl mb-3 bg-rally-cream"
+                />
+              ) : (
+                <div className="w-full aspect-square rounded-2xl mb-3 bg-rally-cream border border-rally-border flex items-center justify-center">
+                  <Icon name="user" weight="fill" size={40} className="text-rally-border" />
+                </div>
+              )}
               <p className="text-rally-black text-sm leading-snug" style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}>
-                {member}
+                {member.name}
               </p>
             </div>
           ))}
