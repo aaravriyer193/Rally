@@ -2,6 +2,14 @@ import { Icon } from '../components/Icon'
 import { MarketingNav } from '../components/MarketingNav'
 import { MarketingFooter } from '../components/MarketingFooter'
 
+const TEAM: { name: string; photo?: string }[] = [
+  { name: 'Hriday Navin', photo: '/team/hriday-navin.jpg' },
+  { name: 'Aarav Iyer', photo: '/team/aarav-iyer.jpg' },
+  { name: 'Saijayant Govarnadan' },
+  { name: 'Aarav Khandelwal', photo: '/team/aarav-khandelwal.jpg' },
+  { name: 'Yashvin Srinivas Perla', photo: '/team/yashvin-perla.jpg' },
+]
+
 export function About() {
   return (
     <div className="min-h-screen bg-rally-cream flex flex-col">
@@ -67,6 +75,47 @@ export function About() {
             <p className="text-white mb-2" style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}>Connection, not a cut</p>
             <p className="text-sm text-[#999] leading-relaxed">We don't process payments or take a fee. We just help you find each other.</p>
           </div>
+        </div>
+      </section>
+
+      <section className="max-w-5xl mx-auto px-8 pb-24 w-full">
+        <p className="text-xs text-rally-amber uppercase tracking-wide mb-4 flex items-center gap-1.5">
+          <Icon name="users-three" weight="fill" size={14} /> The team
+        </p>
+        <h2 className="text-3xl text-rally-black mb-3" style={{ fontFamily: 'CoFo Robert', fontWeight: 500, letterSpacing: '-0.5px' }}>
+          Five of us built this
+        </h2>
+        <p className="text-gray-500 text-base leading-relaxed mb-10 max-w-2xl">
+          Rally started as our entry to the Freshmen&apos;s Entrepreneurship and Innovation Programme, built
+          around the UN Sustainable Development Goals. We picked the favour economy because every one of us
+          had already watched it happen badly in a group chat.
+        </p>
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+          {TEAM.map((member) => (
+            <div
+              key={member.name}
+              className="bg-white rounded-3xl border border-rally-border p-4 text-center shadow-[0_1px_2px_rgba(17,17,16,0.04)] hover:shadow-[0_12px_32px_rgba(17,17,16,0.08)] hover:-translate-y-0.5 transition-all duration-300"
+            >
+              {member.photo ? (
+                <img
+                  src={member.photo}
+                  alt={member.name}
+                  loading="lazy"
+                  width={520}
+                  height={520}
+                  className="w-full aspect-square object-cover rounded-2xl mb-3 bg-rally-cream"
+                />
+              ) : (
+                <div className="w-full aspect-square rounded-2xl mb-3 bg-rally-cream border border-rally-border flex items-center justify-center">
+                  <Icon name="user" weight="fill" size={40} className="text-rally-border" />
+                </div>
+              )}
+              <p className="text-rally-black text-sm leading-snug" style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}>
+                {member.name}
+              </p>
+            </div>
+          ))}
         </div>
       </section>
 
