@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom'
 import { Icon } from '../components/Icon'
 import { MarketingNav } from '../components/MarketingNav'
 import { MarketingFooter } from '../components/MarketingFooter'
-import { PhoneFrame } from '../components/PhoneFrame'
 
 function FeatureCard({ icon, tint, title, desc }: { icon: React.ReactNode; tint: string; title: string; desc: string }) {
   return (
@@ -16,148 +15,9 @@ function FeatureCard({ icon, tint, title, desc }: { icon: React.ReactNode; tint:
   )
 }
 
-function StatusBar() {
-  return (
-    <div className="h-9 flex items-center justify-between px-5 pt-1 text-[10px] text-rally-black flex-shrink-0">
-      <span style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}>9:41</span>
-      <div className="flex items-center gap-1">
-        <Icon name="cell-signal-full" size={11} />
-        <Icon name="wifi-high" size={11} />
-        <Icon name="battery-full" size={12} />
-      </div>
-    </div>
-  )
-}
-
-function HomeScreenMock() {
-  return (
-    <div className="h-full flex flex-col bg-rally-cream">
-      <StatusBar />
-      <div className="bg-rally-black px-4 pt-2 pb-5 flex-shrink-0">
-        <p className="text-white text-xl" style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}>Hi, Alex</p>
-        <p className="text-[10px] text-[#999] mt-1 flex items-center gap-1"><Icon name="map-pin" weight="fill" size={10} className="text-rally-amber" /> Near Riverside</p>
-      </div>
-      <div className="px-4 pt-3 flex gap-1.5 flex-shrink-0">
-        <span className="text-[9px] bg-rally-black text-white px-2.5 py-1 rounded-full" style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}>Tasks near you</span>
-        <span className="text-[9px] bg-white border border-rally-border text-gray-500 px-2.5 py-1 rounded-full">Find a pro</span>
-      </div>
-      <div className="px-4 pt-3 flex flex-col gap-2 flex-1">
-        <div className="bg-white rounded-2xl border border-rally-border p-3">
-          <div className="flex items-start justify-between">
-            <p className="text-[11px] text-rally-black" style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}>Mow the lawn this weekend</p>
-            <span className="text-[7px] bg-rally-cream text-gray-500 px-1.5 py-0.5 rounded-full flex-shrink-0">Yard</span>
-          </div>
-          <p className="text-[9px] text-gray-400 mt-1">Mrs. Patel · 0.3 mi</p>
-        </div>
-        <div className="bg-white rounded-2xl border border-rally-border p-3">
-          <div className="flex items-start justify-between">
-            <p className="text-[11px] text-rally-black" style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}>Grocery run</p>
-            <span className="text-[7px] bg-rally-cream text-gray-500 px-1.5 py-0.5 rounded-full flex-shrink-0">Errands</span>
-          </div>
-          <p className="text-[9px] text-gray-400 mt-1">Mr. Okonkwo · 0.5 mi</p>
-        </div>
-        <div className="bg-rally-black rounded-2xl p-3">
-          <div className="flex items-center gap-2 mb-1">
-            <div className="w-5 h-5 rounded-lg bg-white/10 flex items-center justify-center">
-              <Icon name="wrench" weight="fill" size={10} className="text-white" />
-            </div>
-            <p className="text-[10px] text-white" style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}>Marcus T. — Electrician</p>
-          </div>
-          <p className="text-[9px] text-[#999]">$65/hr · Riverside</p>
-        </div>
-      </div>
-    </div>
-  )
-}
-
-function MatchScreenMock() {
-  return (
-    <div className="h-full flex flex-col bg-rally-cream">
-      <StatusBar />
-      <div className="px-4 pt-2 flex items-center gap-2 flex-shrink-0">
-        <Icon name="arrow-left" size={14} className="text-rally-black" />
-        <span className="text-[9px] text-gray-400">Yard &amp; outdoor</span>
-      </div>
-      <div className="px-4 pt-4 flex-1">
-        <div className="bg-white rounded-2xl border border-rally-border p-3.5">
-          <span className="text-[8px] bg-rally-green-light text-rally-green px-2 py-0.5 rounded-full">Filled — matched</span>
-          <p className="text-[13px] text-rally-black mt-2" style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}>Mow the lawn this weekend</p>
-          <p className="text-[18px] text-rally-black mt-1" style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}>Unpaid</p>
-
-          <div className="bg-rally-cream rounded-xl p-2.5 mt-3 flex items-center gap-2">
-            <div className="w-7 h-7 rounded-full bg-white flex items-center justify-center flex-shrink-0">
-              <Icon name="user" size={12} className="text-rally-border" />
-            </div>
-            <div className="flex-1 min-w-0">
-              <p className="text-[10px] text-rally-black" style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}>Jordan Rivera</p>
-              <p className="text-[8px] text-gray-400">You&apos;re matched!</p>
-            </div>
-            <div className="flex items-center gap-0.5 bg-rally-green-light text-rally-green px-2 py-1 rounded-lg flex-shrink-0">
-              <Icon name="check" weight="bold" size={8} />
-              <span className="text-[8px]">Random</span>
-            </div>
-          </div>
-
-          <div className="bg-rally-black text-white text-center rounded-xl py-2.5 mt-3">
-            <span className="text-[10px]" style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}>Confirm task is done</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  )
-}
-
-function CertScreenMock() {
-  return (
-    <div className="h-full flex flex-col bg-rally-cream">
-      <StatusBar />
-      <div className="px-4 pt-3 flex-1 flex items-center">
-        <div className="w-full bg-white rounded-xl border-2 border-rally-black p-1">
-          <div className="border border-rally-border rounded-lg px-4 py-5 flex flex-col items-center text-center relative">
-            <span className="absolute top-1.5 left-1.5 w-2.5 h-2.5 border-t border-l border-rally-amber" />
-            <span className="absolute top-1.5 right-1.5 w-2.5 h-2.5 border-t border-r border-rally-amber" />
-            <span className="absolute bottom-1.5 left-1.5 w-2.5 h-2.5 border-b border-l border-rally-amber" />
-            <span className="absolute bottom-1.5 right-1.5 w-2.5 h-2.5 border-b border-r border-rally-amber" />
-            <Icon name="seal-check" weight="fill" size={16} className="text-rally-black mb-2" />
-            <p className="text-[7px] tracking-[0.15em] text-rally-amber uppercase">Certificate of Service</p>
-            <p className="text-[8px] text-gray-400 mt-2">This certifies that</p>
-            <p className="text-[15px] text-rally-black mt-1 pb-1 border-b border-rally-cream px-3" style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}>Jordan Rivera</p>
-            <p className="text-[7px] text-gray-500 mt-2 leading-relaxed">completed 25+ hours of volunteer service on Rally</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  )
-}
-
-function ProScreenMock() {
-  return (
-    <div className="h-full flex flex-col bg-rally-cream">
-      <StatusBar />
-      <div className="px-4 pt-2 flex-shrink-0">
-        <p className="text-rally-black text-xl" style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}>Find a pro</p>
-      </div>
-      <div className="px-4 pt-2 flex gap-1.5 overflow-hidden flex-shrink-0">
-        {['All', 'Electrical', 'Plumbing', 'Tutoring'].map((c, i) => (
-          <span key={c} className={`text-[8px] px-2 py-1 rounded-full flex-shrink-0 ${i === 0 ? 'bg-rally-black text-white' : 'bg-white border border-rally-border text-gray-500'}`}>{c}</span>
-        ))}
-      </div>
-      <div className="px-4 pt-3 flex flex-col gap-2 flex-1">
-        {[["Marcus T.", "Electrician", "$65/hr"], ["Priya S.", "Tutoring", "$30/hr"]].map((p) => (
-          <div key={p[0]} className="bg-white rounded-2xl border border-rally-border p-2.5 flex items-center gap-2">
-            <div className="w-8 h-8 rounded-xl bg-rally-amber-light flex items-center justify-center flex-shrink-0">
-              <Icon name="wrench" size={13} className="text-rally-amber" />
-            </div>
-            <div className="flex-1 min-w-0">
-              <p className="text-[10px] text-rally-black" style={{ fontFamily: 'CoFo Robert', fontWeight: 500 }}>{p[0]}</p>
-              <p className="text-[8px] text-gray-400">{p[1]}</p>
-            </div>
-            <span className="text-[9px] text-rally-black flex-shrink-0">{p[2]}</span>
-          </div>
-        ))}
-      </div>
-    </div>
-  )
+// Phones rendered with React Bits Center Stage (reactbits.dev/tools/center-stage).
+function DeviceShot({ src, alt, width, height, eager, className = '' }: { src: string; alt: string; width: number; height: number; eager?: boolean; className?: string }) {
+  return <img src={src} alt={alt} width={width} height={height} loading={eager ? 'eager' : 'lazy'} decoding="async" className={`h-auto select-none ${className}`} draggable={false} />
 }
 
 function FeatureRow({
@@ -229,9 +89,14 @@ export function Landing() {
           </div>
 
           <div className="hidden sm:flex justify-center relative">
-            <PhoneFrame>
-              <HomeScreenMock />
-            </PhoneFrame>
+            <DeviceShot
+              src="/phones/hero.webp"
+              alt="Rally on three phones: a matched task, nearby tasks and local pros"
+              width={1200}
+              height={889}
+              eager
+              className="w-[122%] max-w-none flex-shrink-0"
+            />
 
             <div className="absolute -top-2 -right-2 bg-white rounded-full border border-rally-border pl-2 pr-3.5 py-1.5 shadow-[0_12px_30px_rgba(17,17,16,0.12)] flex items-center gap-1.5 whitespace-nowrap rotate-3">
               <span className="w-4 h-4 rounded-full bg-rally-green-light flex items-center justify-center text-[9px] text-rally-green font-bold flex-shrink-0">✓</span>
@@ -259,7 +124,7 @@ export function Landing() {
             'One applicant selected at random, server-side',
             'Numbers exchanged only once you’re matched',
           ]}
-          phone={<PhoneFrame tilt={-2}><MatchScreenMock /></PhoneFrame>}
+          phone={<DeviceShot src="/phones/match.webp" alt="A task matched to a volunteer at random" width={720} height={1272} className="w-[300px] max-w-full" />}
         />
         <FeatureRow
           reverse
@@ -271,7 +136,7 @@ export function Landing() {
             'Milestone certificates for hour & task streaks',
             'Print or save as PDF straight from your browser',
           ]}
-          phone={<PhoneFrame tilt={2}><CertScreenMock /></PhoneFrame>}
+          phone={<DeviceShot src="/phones/cert.webp" alt="A Rally certificate of service" width={720} height={1171} className="w-[310px] max-w-full" />}
         />
         <FeatureRow
           eyebrow="Find a pro"
@@ -282,7 +147,7 @@ export function Landing() {
             'Filtered by distance to you',
             'We connect you — no payments through the app',
           ]}
-          phone={<PhoneFrame tilt={-2}><ProScreenMock /></PhoneFrame>}
+          phone={<DeviceShot src="/phones/pro.webp" alt="Local professionals listed by category" width={720} height={1157} className="w-[340px] max-w-full" />}
         />
       </section>
 
